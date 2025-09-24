@@ -85,6 +85,7 @@
   display: none;
   flex-direction: column;
   cursor: pointer;
+  padding: 8px;
 }
 
 .bar {
@@ -93,6 +94,19 @@
   margin: 3px 0;
   transition: 0.3s;
   background-color: #fff;
+}
+
+/* Simple Hamburger Animation */
+.navbar-toggle.active .bar:nth-child(1) {
+  transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.navbar-toggle.active .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggle.active .bar:nth-child(3) {
+  transform: rotate(45deg) translate(-5px, -6px);
 }
 
 /* Mobile Responsive */
@@ -109,18 +123,13 @@
     position: absolute;
     top: 70px;
     left: -100%;
-    opacity: 1;
-    transition: all 0.5s ease;
+    transition: left 0.3s ease;
     background-color: #1a1a1a;
-    z-index: 1;
+    z-index: 1000;
   }
 
   .navbar-menu.active {
-    background-color: #1a1a1a;
     left: 0;
-    opacity: 1;
-    transition: all 0.5s ease;
-    z-index: 1;
   }
 
   .navbar-item {
@@ -129,10 +138,19 @@
   }
 
   .navbar-link {
-    text-align: center;
+    color: #fff;
+    text-decoration: none;
     padding: 2rem;
     width: 100%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+  }
+
+  .navbar-link:hover {
+    color: #00d4ff;
   }
 
   .navbar-toggle {

@@ -1,7 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Navbar.css";
 
 const Navbar = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-container">
@@ -11,26 +21,30 @@ const Navbar = () => {
         </div>
 
         {/* Navigation Links */}
-        <ul className="navbar-menu">
+        <ul className={`navbar-menu ${isMenuOpen ? "active" : ""}`}>
           <li className="navbar-item">
-            <a href="#experience" className="navbar-link">
+            <a href="#experience" className="navbar-link" onClick={closeMenu}>
               Experience
             </a>
           </li>
           <li className="navbar-item">
-            <a href="#skills" className="navbar-link">
+            <a href="#skills" className="navbar-link" onClick={closeMenu}>
               Skills
             </a>
           </li>
           <li className="navbar-item">
-            <a href="#contact" className="navbar-link">
+            <a href="#contact" className="navbar-link" onClick={closeMenu}>
               Contact Me
             </a>
           </li>
         </ul>
 
         {/* Mobile Menu Toggle */}
-        <div className="navbar-toggle" id="mobile-menu">
+        <div
+          className={`navbar-toggle ${isMenuOpen ? "active" : ""}`}
+          id="mobile-menu"
+          onClick={toggleMenu}
+        >
           <span className="bar"></span>
           <span className="bar"></span>
           <span className="bar"></span>

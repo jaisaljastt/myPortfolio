@@ -340,11 +340,21 @@
   .contact-details-social-container {
     flex-direction: column;
     gap: 2rem;
+    align-items: center;
+  }
+
+  .contact-details {
+    text-align: center;
+  }
+
+  .social-links {
+    text-align: center;
   }
 
   .social-buttons {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
   }
 
   .social-btn {
@@ -386,12 +396,25 @@
     font-size: 1rem;
   }
 
+  .contact-details {
+    text-align: center;
+  }
+
+  .social-links {
+    text-align: center;
+  }
+
   .social-buttons {
-    flex-direction: column;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
   }
 
   .social-btn {
     padding: 0.8rem 1.2rem;
+    flex: 1;
+    max-width: 140px;
   }
 
   .quick-stats {
@@ -433,12 +456,31 @@
     font-size: 1.5rem;
   }
 
+  .contact-details {
+    text-align: center;
+  }
+
+  .social-links {
+    text-align: center;
+  }
+
   .social-title {
     font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .social-buttons {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
   }
 
   .social-btn {
     padding: 0.7rem 1rem;
+    flex: 1;
+    max-width: 120px;
+    font-size: 0.9rem;
   }
 
   .stat-number {

@@ -1,7 +1,8 @@
-import { useState } from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Experience from "./components/Experience";
+import Skills from "./components/Skills";
+import Contact from "./components/Contact";
 import "./App.css";
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Hero />
       <Experience />
       <Skills />
+      <Contact />
     </div>
   );
 }
